@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\smarthome.props" />
+</Project>
