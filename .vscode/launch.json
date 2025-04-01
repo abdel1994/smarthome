@@ -1,0 +1,39 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+      {
+        // 1) .NET Core debug config
+        "name": "Backend (.NET Core)",
+        "type": "coreclr",
+        "request": "launch",
+        "preLaunchTask": "build",
+        // Pas hieronder pad/naam van je DLL aan
+        "program": "${workspaceFolder}/smarthome/bin/Debug/net8.0/smarthome.dll",  
+        "args": [],
+        "cwd": "${workspaceFolder}",
+        "stopAtEntry": false,
+        "console": "integratedTerminal"
+      },
+      {
+        // 2) Chrome debug config, opent automatisch de front-endpagina
+        "name": "Chrome (Frontend)",
+        "type": "chrome",
+        "request": "launch",
+        // Pas hieronder URL aan naar de Live Server-URL van je index.html
+        "url": "http://127.0.0.1:5500/index.html",
+        // webRoot = waar je JS/HTML staat
+        "webRoot": "${workspaceFolder}/smart/SmartFront/wwwroot/index.html"  
+      }
+    ],
+    // 3) Compound config om beide tegelijk te starten
+    "compounds": [
+      {
+        "name": "Launch Both",
+        "configurations": [
+          "Backend (.NET Core)",
+          "Chrome (Frontend)"
+        ]
+      }
+    ]
+  }
+  
