@@ -3797,11 +3797,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\abdel\\Desktop\\smart\\smarthome\\smarthome.csproj",
+      "projectUniqueName": "C:\\Users\\abdel\\Desktop\\smarthome\\smarthome\\smarthome\\smarthome.csproj",
       "projectName": "smarthome",
-      "projectPath": "c:\\Users\\abdel\\Desktop\\smart\\smarthome\\smarthome.csproj",
+      "projectPath": "C:\\Users\\abdel\\Desktop\\smarthome\\smarthome\\smarthome\\smarthome.csproj",
       "packagesPath": "C:\\Users\\abdel\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\abdel\\Desktop\\smart\\smarthome\\obj\\",
+      "outputPath": "C:\\Users\\abdel\\Desktop\\smarthome\\smarthome\\smarthome\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\abdel\\AppData\\Roaming\\NuGet\\NuGet.Config"

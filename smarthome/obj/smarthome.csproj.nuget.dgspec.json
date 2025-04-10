@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\abdel\\Desktop\\smart\\smarthome\\smarthome.csproj": {}
+    "C:\\Users\\abdel\\Desktop\\smarthome\\smarthome\\smarthome\\smarthome.csproj": {}
   },
   "projects": {
-    "C:\\Users\\abdel\\Desktop\\smart\\smarthome\\smarthome.csproj": {
+    "C:\\Users\\abdel\\Desktop\\smarthome\\smarthome\\smarthome\\smarthome.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\abdel\\Desktop\\smart\\smarthome\\smarthome.csproj",
+        "projectUniqueName": "C:\\Users\\abdel\\Desktop\\smarthome\\smarthome\\smarthome\\smarthome.csproj",
         "projectName": "smarthome",
-        "projectPath": "C:\\Users\\abdel\\Desktop\\smart\\smarthome\\smarthome.csproj",
+        "projectPath": "C:\\Users\\abdel\\Desktop\\smarthome\\smarthome\\smarthome\\smarthome.csproj",
         "packagesPath": "C:\\Users\\abdel\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\abdel\\Desktop\\smart\\smarthome\\obj\\",
+        "outputPath": "C:\\Users\\abdel\\Desktop\\smarthome\\smarthome\\smarthome\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\abdel\\AppData\\Roaming\\NuGet\\NuGet.Config"

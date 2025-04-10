@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "dDfIfHqCYhc=",
+  "dgSpecHash": "mcfFremPlpM=",
   "success": true,
-  "projectFilePath": "C:\\Users\\abdel\\Desktop\\smart\\smarthome\\smarthome.csproj",
+  "projectFilePath": "C:\\Users\\abdel\\Desktop\\smarthome\\smarthome\\smarthome\\smarthome.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\abdel\\.nuget\\packages\\google.protobuf\\3.29.0\\google.protobuf.3.29.0.nupkg.sha512",
     "C:\\Users\\abdel\\.nuget\\packages\\htmlagilitypack\\1.12.0\\htmlagilitypack.1.12.0.nupkg.sha512",

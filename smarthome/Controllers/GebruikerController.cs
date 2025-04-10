@@ -99,9 +99,7 @@ public class GebruikerController: ControllerBase
 
      [HttpPost("Volume")]
     public async Task<IActionResult> Volume([FromBody] float vol)
-    {
-        
-        
+    {  
         _ = await _castService.Client.ReceiverChannel.SetVolume(vol);
         return Ok();
     } 

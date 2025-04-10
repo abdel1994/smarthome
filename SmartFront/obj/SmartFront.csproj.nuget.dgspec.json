@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\abdel\\Desktop\\smart\\SmartFront\\SmartFront.csproj": {}
+    "C:\\Users\\abdel\\Desktop\\smarthome\\smarthome\\SmartFront\\SmartFront.csproj": {}
   },
   "projects": {
-    "C:\\Users\\abdel\\Desktop\\smart\\SmartFront\\SmartFront.csproj": {
+    "C:\\Users\\abdel\\Desktop\\smarthome\\smarthome\\SmartFront\\SmartFront.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\abdel\\Desktop\\smart\\SmartFront\\SmartFront.csproj",
+        "projectUniqueName": "C:\\Users\\abdel\\Desktop\\smarthome\\smarthome\\SmartFront\\SmartFront.csproj",
         "projectName": "SmartFront",
-        "projectPath": "C:\\Users\\abdel\\Desktop\\smart\\SmartFront\\SmartFront.csproj",
+        "projectPath": "C:\\Users\\abdel\\Desktop\\smarthome\\smarthome\\SmartFront\\SmartFront.csproj",
         "packagesPath": "C:\\Users\\abdel\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\abdel\\Desktop\\smart\\SmartFront\\obj\\",
+        "outputPath": "C:\\Users\\abdel\\Desktop\\smarthome\\smarthome\\SmartFront\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\abdel\\AppData\\Roaming\\NuGet\\NuGet.Config"

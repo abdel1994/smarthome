@@ -1,0 +1,27 @@
+
+services:
+  smarthome-api:
+    image: hajoui/smarthome-api:1.0
+    build:
+      context: .
+      dockerfile: smarthome/Dockerfile
+    ports:
+      - "5000:8080"
+    networks:
+      - smarthome-net
+
+  smartfront:
+    image: hajoui/smartfront:1.0
+    build:
+      context: ./SmartFront
+      dockerfile: Dockerfile
+    ports:
+      - "5500:80"
+    depends_on:
+      - smarthome-api
+    networks:
+      - smarthome-net
+
+networks:
+  smarthome-net:
+    driver: bridge

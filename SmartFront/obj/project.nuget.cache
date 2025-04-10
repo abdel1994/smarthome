@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Uwj2E0yRfAY=",
+  "dgSpecHash": "dLGINn2jPt0=",
   "success": true,
-  "projectFilePath": "C:\\Users\\abdel\\Desktop\\smart\\SmartFront\\SmartFront.csproj",
+  "projectFilePath": "C:\\Users\\abdel\\Desktop\\smarthome\\smarthome\\SmartFront\\SmartFront.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\abdel\\.nuget\\packages\\inthehand.net.bluetooth\\4.2.0\\inthehand.net.bluetooth.4.2.0.nupkg.sha512",
     "C:\\Users\\abdel\\.nuget\\packages\\linux.bluetooth\\5.67.1\\linux.bluetooth.5.67.1.nupkg.sha512",

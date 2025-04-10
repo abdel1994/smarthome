@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "SmartFront",
   "resources": {
-    "hash": "sha256-KIY+KGM6LkzJYsA5TkxCkcEGuGnR7DF3M+vO8jnbt4k=",
+    "hash": "sha256-5e0m5lH526+KGaD4WY6IG6pyCjfF4HZfKYNdDOK8Oo8=",
     "jsModuleNative": {
       "dotnet.native.8.0.13.wavxsau8t5.js": "sha256-xNQsYHtL1vcbrVTHDZAwJM4WovpoyjsrM2C6FQ8cW1w="
     },
@@ -211,10 +211,10 @@
       "mscorlib.wasm": "sha256-RAf5jgXLg+06C4tJ3CabxAZaVjCN2/+E6fxRjRN8yHk=",
       "netstandard.wasm": "sha256-KCAE8RQwTurP5pGnGF819qf9sK++2O0rXzt6tOjlfi8=",
       "System.Private.CoreLib.wasm": "sha256-LQqLbHgeEX4HONx7GwIxGgmzIXP6n2OPxqnq+/4Tyqk=",
-      "SmartFront.wasm": "sha256-xW4iXkoe+rUU+CKae2sjvqvRIni7Jsul4M3BKXRsoQo="
+      "SmartFront.wasm": "sha256-wySY3qafD8Ka2AkhY2agfDo8Ct5anuA2pZe9n0OWhSU="
     },
     "pdb": {
-      "SmartFront.pdb": "sha256-DL8DHyPAP8SW1MyHsvYn+fb8ZUPv1kcO3P5cLRGshjc="
+      "SmartFront.pdb": "sha256-bQcDEAzJYN/j2sLBUI6yj9knCrikfXp2M0B+EFH9crk="
     }
   },
   "cacheBootResources": true,

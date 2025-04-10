@@ -2,16 +2,73 @@
 	"version": "2.0.0",
 	"tasks": [
 	  {
-		// Dit is de taak "build"
-		"label": "build",
+		"label": "build-backend",
 		"type": "shell",
 		"command": "dotnet",
 		"args": [
 		  "build",
-		  // Pas dit eventueel aan naar de csproj die je wilt bouwen
 		  "${workspaceFolder}/smarthome/smarthome.csproj"
 		],
 		"problemMatcher": "$msCompile"
+	  },
+	  {
+		"label": "build-frontend",
+		"type": "shell",
+		"command": "dotnet",
+		"args": [
+		  "build",
+		  "${workspaceFolder}/SmartFront/SmartFront.csproj"
+		],
+		"problemMatcher": "$msCompile"
+	  },
+	  {
+		"label": "run-backend",
+		"type": "shell",
+		"command": "dotnet",
+		"args": [
+		  "run",
+		  "--project",
+		  "${workspaceFolder}/smarthome/smarthome.csproj"
+		],
+		"problemMatcher": []
+	  },
+	  {
+		"label": "run-frontend",
+		"type": "shell",
+		"command": "dotnet",
+		"args": [
+		  "run",
+		  "--project",
+		  "${workspaceFolder}/SmartFront/SmartFront.csproj"
+		],
+		"problemMatcher": []
+	  },
+	  {
+		"label": "open-browser",
+		"type": "shell",
+		"windows": {
+		  "command": "cmd",
+		  "args": ["/c", "start http://localhost:5500"]
+		},
+		"linux": {
+		  "command": "xdg-open",
+		  "args": ["https://localhost:5173"]
+		},
+		"osx": {
+		  "command": "open",
+		  "args": ["http://localhost:5500"]
+		},
+		"problemMatcher": []
+	  },
+	  {
+		"label": "start-all",
+		"dependsOn": [
+		  "build-backend",
+		  "build-frontend",
+		  "run-backend",
+		  "run-frontend",
+		  "open-browser"
+		]
 	  }
 	]
   }
