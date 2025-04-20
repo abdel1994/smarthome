@@ -1,14 +1,9 @@
-using smarthome.Data;
-using smarthome;
 using Microsoft.EntityFrameworkCore;
 
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
-builder.Services.AddDbContext<ApiDBContext>(options =>
-    options.UseNpgsql(connectionString));
+// Add services to the containe
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
@@ -27,6 +22,7 @@ builder.Services.AddCors(options =>
             builder.AllowAnyOrigin()
                    .AllowAnyMethod()
                    .AllowAnyHeader();
+                    
         });
 });
   
@@ -36,11 +32,13 @@ var app = builder.Build();
 
 
 // Configure the HTTP request pipeline.
-
+    app.UseCors("AllowAllOrigins");
     app.UseSwagger();
     app.UseSwaggerUI();
-    app.UseCors("AllowAll");
 
+
+
+app.UseStaticFiles();
 app.UseHttpsRedirection();
 
 app.MapControllers();

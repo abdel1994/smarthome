@@ -1,0 +1,27 @@
+#!/usr/bin/expect -f
+set mac [lindex $argv 0]
+spawn bluetoothctl
+
+expect "#"
+send "power on\r"
+
+expect "#"
+send "agent on\r"
+
+expect "#"
+send "scan on\r"
+
+
+expect "#"
+send "pair $mac\r"
+
+
+send "trust $mac\r"
+expect "#"
+
+send "connect $mac\r"
+
+sleep 8 
+
+send "exit\r"
+expect eof

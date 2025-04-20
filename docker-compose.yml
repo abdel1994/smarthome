@@ -1,3 +1,4 @@
+version: '3.8'
 
 services:
   smarthome-api:
@@ -5,10 +6,22 @@ services:
     build:
       context: .
       dockerfile: smarthome/Dockerfile
+    network_mode: host
+    cap_add:
+      - NET_ADMIN
+    devices:
+      - /dev/rfkill
+      - /dev/snd
+    volumes:
+      - /run/dbus:/run/dbus                                # ✅ correcte mount
+      - /run/user/1000:/run/user/1000
+      - /run/user/1000/pulse:/run/user/1000/pulse
+      - .//wwwroot:/app/wwwroot
+    environment:
+      - DBUS_SYSTEM_BUS_ADDRESS=unix:path=/run/dbus/system_bus_socket  # ✅ correcte pad
+      - PULSE_SERVER=unix:/run/user/1000/pulse/native
     ports:
       - "5000:8080"
-    networks:
-      - smarthome-net
 
   smartfront:
     image: hajoui/smartfront:1.0
@@ -16,7 +29,7 @@ services:
       context: ./SmartFront
       dockerfile: Dockerfile
     ports:
-      - "5500:80"
+      - "5600:80"
     depends_on:
       - smarthome-api
     networks:

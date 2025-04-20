@@ -3792,19 +3792,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\abdel\\.nuget\\packages\\": {}
+    "/home/abdel/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\abdel\\Desktop\\smarthome\\smarthome\\smarthome\\smarthome.csproj",
+      "projectUniqueName": "/home/abdel/projecten/smarthome/smarthome/smarthome.csproj",
       "projectName": "smarthome",
-      "projectPath": "C:\\Users\\abdel\\Desktop\\smarthome\\smarthome\\smarthome\\smarthome.csproj",
-      "packagesPath": "C:\\Users\\abdel\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\abdel\\Desktop\\smarthome\\smarthome\\smarthome\\obj\\",
+      "projectPath": "/home/abdel/projecten/smarthome/smarthome/smarthome.csproj",
+      "packagesPath": "/home/abdel/.nuget/packages/",
+      "outputPath": "/home/abdel/projecten/smarthome/smarthome/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\abdel\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "/home/abdel/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -3883,7 +3883,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.406/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.408/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

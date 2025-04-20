@@ -449,13 +449,13 @@
           }
         }
       },
-      "Microsoft.NET.ILLink.Tasks/8.0.13": {
+      "Microsoft.NET.ILLink.Tasks/8.0.15": {
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
         }
       },
-      "Microsoft.NET.Sdk.WebAssembly.Pack/8.0.13": {
+      "Microsoft.NET.Sdk.WebAssembly.Pack/8.0.15": {
         "type": "package",
         "build": {
           "build/Microsoft.NET.Sdk.WebAssembly.Pack.props": {},
@@ -940,13 +940,13 @@
           }
         }
       },
-      "Microsoft.NET.ILLink.Tasks/8.0.13": {
+      "Microsoft.NET.ILLink.Tasks/8.0.15": {
         "type": "package",
         "build": {
           "build/Microsoft.NET.ILLink.Tasks.props": {}
         }
       },
-      "Microsoft.NET.Sdk.WebAssembly.Pack/8.0.13": {
+      "Microsoft.NET.Sdk.WebAssembly.Pack/8.0.15": {
         "type": "package",
         "build": {
           "build/Microsoft.NET.Sdk.WebAssembly.Pack.props": {},
@@ -1857,10 +1857,10 @@
         "microsoft.jsinterop.webassembly.nuspec"
       ]
     },
-    "Microsoft.NET.ILLink.Tasks/8.0.13": {
-      "sha512": "R19ZTaRiQAK+xo9ZwaHbF/1vb1wwR1Wn5+sqp9v8+CDjbdS8R6qftKdw0VSXWKm7VAMi7P+NCU4zxDzhEWcAwQ==",
+    "Microsoft.NET.ILLink.Tasks/8.0.15": {
+      "sha512": "s4eXlcRGyHeCgFUGQnhq0e/SCHBPp0jOHgMqZg3fQ2OCHJSm1aOUhI6RFWuVIcEb9ig2WgI2kWukk8wu72EbUQ==",
       "type": "package",
-      "path": "microsoft.net.illink.tasks/8.0.13",
+      "path": "microsoft.net.illink.tasks/8.0.15",
       "hasTools": true,
       "files": [
         ".nupkg.metadata",
@@ -1874,7 +1874,7 @@
         "build/Microsoft.NET.ILLink.Analyzers.props",
         "build/Microsoft.NET.ILLink.Tasks.props",
         "build/Microsoft.NET.ILLink.targets",
-        "microsoft.net.illink.tasks.8.0.13.nupkg.sha512",
+        "microsoft.net.illink.tasks.8.0.15.nupkg.sha512",
         "microsoft.net.illink.tasks.nuspec",
         "tools/net472/ILLink.Tasks.dll",
         "tools/net472/ILLink.Tasks.dll.config",
@@ -1908,10 +1908,10 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "Microsoft.NET.Sdk.WebAssembly.Pack/8.0.13": {
-      "sha512": "zdRHxywQXvf/Smwd48y4RUL/v9Xphw0EJzEqYfjCeJgYjZ/+LdqMzQaO2HO9PShLQ63hdfWzw/LBI8fGoGrD+w==",
+    "Microsoft.NET.Sdk.WebAssembly.Pack/8.0.15": {
+      "sha512": "Q/RDNqyGuVXcXdtAO1PknxbEjYbiYs9ONoClC91G16PZ/i4U+Jhzy+XiTywO/+dvVsvb7JZmsPqlNYuuBvGMBg==",
       "type": "package",
-      "path": "microsoft.net.sdk.webassembly.pack/8.0.13",
+      "path": "microsoft.net.sdk.webassembly.pack/8.0.15",
       "hasTools": true,
       "files": [
         ".nupkg.metadata",
@@ -1939,7 +1939,7 @@
         "build/Microsoft.NET.Sdk.WebAssembly.Pack.props",
         "build/Microsoft.NET.Sdk.WebAssembly.Pack.targets",
         "build/Wasm.web.config",
-        "microsoft.net.sdk.webassembly.pack.8.0.13.nupkg.sha512",
+        "microsoft.net.sdk.webassembly.pack.8.0.15.nupkg.sha512",
         "microsoft.net.sdk.webassembly.pack.nuspec",
         "tools/net472/Microsoft.Bcl.AsyncInterfaces.dll",
         "tools/net472/Microsoft.Build.dll",
@@ -2028,24 +2028,24 @@
       "InTheHand.Net.Bluetooth >= 4.2.0",
       "Microsoft.AspNetCore.Components.WebAssembly >= 8.0.13",
       "Microsoft.AspNetCore.Components.WebAssembly.DevServer >= 8.0.13",
-      "Microsoft.NET.ILLink.Tasks >= 8.0.13",
-      "Microsoft.NET.Sdk.WebAssembly.Pack >= 8.0.13"
+      "Microsoft.NET.ILLink.Tasks >= 8.0.15",
+      "Microsoft.NET.Sdk.WebAssembly.Pack >= 8.0.15"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\abdel\\.nuget\\packages\\": {}
+    "/home/abdel/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\abdel\\Desktop\\smarthome\\smarthome\\SmartFront\\SmartFront.csproj",
+      "projectUniqueName": "/home/abdel/projecten/smarthome/SmartFront/SmartFront.csproj",
       "projectName": "SmartFront",
-      "projectPath": "C:\\Users\\abdel\\Desktop\\smarthome\\smarthome\\SmartFront\\SmartFront.csproj",
-      "packagesPath": "C:\\Users\\abdel\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\abdel\\Desktop\\smarthome\\smarthome\\SmartFront\\obj\\",
+      "projectPath": "/home/abdel/projecten/smarthome/SmartFront/SmartFront.csproj",
+      "packagesPath": "/home/abdel/.nuget/packages/",
+      "outputPath": "/home/abdel/projecten/smarthome/SmartFront/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\abdel\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "/home/abdel/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -2090,13 +2090,13 @@
           "Microsoft.NET.ILLink.Tasks": {
             "suppressParent": "All",
             "target": "Package",
-            "version": "[8.0.13, )",
+            "version": "[8.0.15, )",
             "autoReferenced": true
           },
           "Microsoft.NET.Sdk.WebAssembly.Pack": {
             "suppressParent": "All",
             "target": "Package",
-            "version": "[8.0.13, )",
+            "version": "[8.0.15, )",
             "autoReferenced": true
           }
         },
@@ -2114,7 +2114,7 @@
         "downloadDependencies": [
           {
             "name": "Microsoft.NETCore.App.Runtime.Mono.browser-wasm",
-            "version": "[8.0.13, 8.0.13]"
+            "version": "[8.0.15, 8.0.15]"
           }
         ],
         "frameworkReferences": {
@@ -2122,7 +2122,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.406/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.408/PortableRuntimeIdentifierGraph.json"
       }
     },
     "runtimes": {

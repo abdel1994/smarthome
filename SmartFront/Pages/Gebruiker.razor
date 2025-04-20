@@ -1,0 +1,173 @@
+﻿@page "/"
+@inject HttpClient Http
+
+
+<h3>Smart Home Controller</h3>
+
+<hr />
+<h4>Bluetooth</h4>
+<button class="btn btn-primary" @onclick="ScanBluetooth">Scan Bluetooth</button>
+
+@if (bluetoothDevices.Any())
+{
+    <ul>
+        @foreach (var device in bluetoothDevices)
+        {
+            <li>
+                @device.name (@device.mac)
+                <button class="btn btn-success btn-sm"
+                        @onclick="() => ConnectBluetooth(device.mac)">
+                    Connect
+                </button>
+            </li>
+        }
+    </ul>
+}
+else
+{
+    <p>Geen apparaten gevonden.</p>
+}
+
+<button class="btn btn-info" @onclick="PlayBluetooth">Play Audio via Bluetooth</button>
+
+<hr />
+<h4>Chromecast</h4>
+<button class="btn btn-primary" @onclick="ScanChromecast">Scan Chromecast</button>
+<button class="btn btn-info" @onclick="PlayChromecast">Play via Chromecast</button>
+
+<hr />
+<h4>Volume</h4>
+<input type="range" min="@_min" max="@_max" step="@_step" @bind="@volume"/>
+<button class="btn btn-warning" @onclick="SetVolume">Set Volume (@volume) </button>
+
+<hr />
+@if (!string.IsNullOrEmpty(statusMessage))
+{
+    <div class="alert alert-info">@statusMessage</div>
+}
+
+@code {
+    // Het model dat we aanmaken om de JSON-resultaten in op te slaan.
+    // let op: lowercase 'mac' en 'name' omdat je in je controller { mac, name } terugstuurt.
+    private List<BluetoothDevice> bluetoothDevices = new();
+    private float volume =0.2f;
+    private string statusMessage = string.Empty;
+
+    private float _min = 0.0f;
+    private float _max = 1.0f;
+    private float _step = 0.1f; 
+
+    // Bluetooth scannen (GET)
+    private async Task ScanBluetooth()
+    {
+        statusMessage = "Scanning Bluetooth devices...";
+        
+        var response = await Http.GetAsync("api/Gebruiker/ScanBluetooth");
+        if (response.IsSuccessStatusCode)
+        {
+            var devices = await response.Content.ReadFromJsonAsync<List<BluetoothDevice>>();
+            if (devices != null)
+            {
+                bluetoothDevices = devices;
+                statusMessage = $"Gevonden apparaten: {bluetoothDevices.Count}";
+            }
+            else
+            {
+                bluetoothDevices.Clear();
+                statusMessage = "Geen data ontvangen (devices == null).";
+            }
+        }
+        else
+        {
+            bluetoothDevices.Clear();
+            statusMessage = "Fout bij het scannen van Bluetooth-apparaten.";
+        }
+    }
+
+    // Bluetooth connectie
+    private async Task ConnectBluetooth(string mac)
+    {
+        statusMessage = $"Verbind met {mac}...";
+        var result = await Http.PostAsJsonAsync("api/Gebruiker/ConnectBluetooth", mac);
+        if (result.IsSuccessStatusCode)
+        {
+            // Server stuurt bijv. { result = "success", output = "..."}
+            var output = await result.Content.ReadAsStringAsync();
+            statusMessage = $"Verbinden gelukt: {output}";
+        }
+        else
+        {
+            statusMessage = "Fout bij het verbinden met het geselecteerde apparaat.";
+        }
+    }
+
+    // Bluetooth audio afspelen (POST)
+    private async Task PlayBluetooth()
+    {
+        statusMessage = "Bluetooth audio wordt afgespeeld...";
+        var response = await Http.PostAsync("api/Gebruiker/PlayBluetooth", null);
+        if (response.IsSuccessStatusCode)
+        {
+            var msg = await response.Content.ReadFromJsonAsync<dynamic>();
+            statusMessage = $"PlayBluetooth: {msg}";
+        }
+        else
+        {
+            statusMessage = "Fout bij het afspelen van Bluetooth audio.";
+        }
+    }
+
+    // Chromecast scannen
+    private async Task ScanChromecast()
+    {
+        statusMessage = "Zoeken naar Chromecast...";
+        var response = await Http.PostAsync("api/Gebruiker/Scan Netwerk", null);
+        if (response.IsSuccessStatusCode)
+        {
+            var msg = await response.Content.ReadAsStringAsync();
+            statusMessage = $"Chromecast gevonden: {msg}";
+        }
+        else
+        {
+            statusMessage = "Geen Chromecast gevonden of fout bij scanning.";
+        }
+    }
+
+    // Chromecast play
+    private async Task PlayChromecast()
+    {
+        statusMessage = "Athan afspelen via Chromecast...";
+        var response = await Http.PostAsync("api/Gebruiker/Play ChromeCast", null);
+        if (response.IsSuccessStatusCode)
+        {
+            var msg = await response.Content.ReadAsStringAsync();
+            statusMessage = $"Chromecast-play: {msg}";
+        }
+        else
+        {
+            statusMessage = "Fout bij het afspelen op Chromecast.";
+        }
+    }
+
+    // Volume instellen
+    private async Task SetVolume()
+    {
+        // We sturen een float (vol) naar de server
+        var response = await Http.PostAsJsonAsync("api/Gebruiker/Volume", volume);
+        if (response.IsSuccessStatusCode)
+        {
+            statusMessage = $"Volume ingesteld op {volume}";
+        }
+        else
+        {
+            statusMessage = "Fout bij het instellen van het volume.";
+        }
+    }
+
+    // Helper class voor Bluetooth devices
+    public class BluetoothDevice
+    {
+        public string mac { get; set; } = string.Empty;
+        public string name { get; set; } = string.Empty;
+    }
+}
